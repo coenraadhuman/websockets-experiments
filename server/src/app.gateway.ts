@@ -20,7 +20,7 @@ export class AppGateway implements OnGatewayInit, OnGatewayConnection, OnGateway
   // Subscribe to the keyword 'message'.
   @SubscribeMessage('message')
   handleMessage(client: Socket, payload: string): void {
-    this.server.emit('broadcast', payload);
+    this.server.emit('broadcast', `[Client ${client.id}]: ${payload}`);
   }
 
   // OnGatewayInit interface.
