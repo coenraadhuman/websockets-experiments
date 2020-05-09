@@ -1,4 +1,5 @@
 # Realtime-Chat with WebSockets
+Playing arround with WebSockets.
 
 ## Server
 NestJS websocket server running on port 3000 using "nestjs/platform-socket.io" and "nestjs/websockets".
