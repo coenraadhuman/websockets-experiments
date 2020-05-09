@@ -1,2 +1,7 @@
-# Realtime-Chat
-Realtime chat server and client created using NestJS.
+# Realtime-Chat with WebSockets
+
+## Server
+NestJS websocket server running on port 3000.
+
+## Client
+- Angular CLI 9 web application using ngx-socket-io.
