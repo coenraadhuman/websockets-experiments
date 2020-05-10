@@ -31,10 +31,12 @@ export class AppGateway implements OnGatewayInit, OnGatewayConnection, OnGateway
    // OnGatewayDisconnect interface.
    handleDisconnect(client: Socket) {
     this.logger.log(`Client disconnected: ${client.id}`);
+    this.server.emit('clients', this.server.clients.length);
    }
   
    // OnGatewayConnection interface.
    handleConnection(client: Socket, ...args: any[]) {
     this.logger.log(`Client connected: ${client.id}`);
+    this.server.emit('clients', this.server.clients.length);
    }
 }
