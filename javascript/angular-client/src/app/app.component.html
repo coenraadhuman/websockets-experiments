@@ -1,0 +1,13 @@
+<p>Message:
+  <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+</p>
+<p>Your Name:
+  <input [(ngModel)]="name"/>
+</p>
+<button (click)="sendMessage()">Send Message</button>
+<p>Clients connected: {{ clientsAmount }}</p>
+<div class="messages">
+  <div *ngFor="let message of messageList">
+    <p><b>S</b> {{ getMilliseconds(message.sent) }} <b>R</b> {{ getMilliseconds(message.arrived)}} |  {{ message.name }} : <i>{{ message.message }}</i></p>
+  </div>
+</div>

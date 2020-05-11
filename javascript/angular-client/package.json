@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "copy": "copy-files-from-to",
+    "build": "ng build --prod --base-href 'https://coenraadhuman.github.io/WebSockets-Experiments/' && npm run copy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -28,6 +29,7 @@
     "@angular-devkit/build-angular": "~0.901.5",
     "@angular/cli": "~9.1.5",
     "@angular/compiler-cli": "~9.1.6",
+    "copy-files-from-to": "^2.3.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
@@ -43,5 +45,11 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
-  }
+  },
+  "copyFiles": [
+    {
+      "from": "dist/angular-client/index.html",
+      "to": "dist/angular-client/404.html"
+    }
+  ]
 }

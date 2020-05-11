@@ -1,26 +1,10 @@
-# Realtime-Chat with WebSockets
-Playing arround with WebSockets.
+# WebSockets - Experiments
+Playing around with WebSockets.
 
-## Server
-NestJS websocket server running on port 3000 using "nestjs/platform-socket.io" and "nestjs/websockets".
+Programming languages explored each has their own directory in the root of this repository. 
 
-### To Start
-```bash
-cd Realtime-Chat
-cd server
-npm start
-```
+These programming directories include:
+- WebSocket client.
+- WebSocket server.
 
-## Clients
-Playing arround with different client technologies connecting to the server.
-
-### Angular Web Application
-Angular CLI 9 web application using ngx-socket-io.
-
-#### To Start
-```bash
-cd Realtime-Chat
-cd clients
-cd angular-client
-npm start
-```
+The server and client is a simple chat application to demostrate the technology.
